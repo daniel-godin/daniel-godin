@@ -1,9 +1,91 @@
 
 :root {
   /* CSS Variables: */
+  --padding-basic: 1rem;
 
 }
 
 * {
+  /* Basic Default CSS Rules Reset to Style Later: */
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  width: 100dvw;
+
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+
+}
+
+/* Global CSS Rules: */
+
+nav {
+  margin: 0;
+  padding: var(--padding-basic);
+  height: 50px;
+  width: 100%;
+
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  border-bottom: 2px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
+  
+}
+
+main {
+  margin: 0;
+  padding: var(--padding-basic);
+  
+}
+
+
+footer {
+  margin: 0;
+  padding: var(--padding-basic);
+  height: 50px;
+  width: 100%;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  border-top: 2px solid black;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* Index.html CSS Rules: */
