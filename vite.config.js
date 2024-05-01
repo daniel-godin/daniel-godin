@@ -5,6 +5,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
+        now: './now.html',
+        portfolio: './portfolio.html',
+        blog: './blog.html',
+        contact: './contact.html',
         // Add more entries for additional HTML files
       }
     }

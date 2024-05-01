@@ -1,9 +1,14 @@
 // Main UI/DOM Import/Export Functions
 
 // Imports:
+import { buildIndexPageUI } from "./index.ts";
+import { buildBlogPageUI } from "./blog.ts";
+import { buildContactPageUI } from "./contact.ts";
+import { buildNowPageUI } from "./now";
+import { buildPortfolioPageUI } from "./portfolio";
 
 // Firebase Imports:
-import { buildIndexPageUI } from ".";
+
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -53,6 +58,10 @@ function buildNavUI() {
 function buildMainUI() {
     const pathname: string = window.location.pathname; // Finding pathname to sort which UI page function to trigger.
     if (pathname == '/index.html' || pathname == '/' || pathname.length === 0) { buildIndexPageUI(); };
+    if (pathname == '/now.html') { buildNowPageUI(); };
+    if (pathname == '/portfolio.html') { buildPortfolioPageUI(); };
+    if (pathname == '/blog.html') { buildBlogPageUI(); };
+    if (pathname == '/contact.html') { buildContactPageUI(); };
 }
 
 function buildFooterUI() {
