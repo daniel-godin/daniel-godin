@@ -2,9 +2,10 @@
 
 
 // Imports:
-import './style.css';
-import './firebase.ts';
-import './ui.ts';
+import './style.css'; // CSS Styling For Whole Website.
+import './firebase.ts'; // Firebase Import/Exports.
+import './ui.ts'; // Main Import/Export UI Creation.
+import './index.ts'; // Index.html UI page.
 
 
 

@@ -3,6 +3,7 @@
 // Imports:
 
 // Firebase Imports:
+import { buildIndexPageUI } from ".";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -50,14 +51,8 @@ function buildNavUI() {
 }
 
 function buildMainUI() {
-    const mainContentContainer = document.getElementById('mainContentContainer') as HTMLDivElement;
-    mainContentContainer.innerHTML = '';
-    mainContentContainer.insertAdjacentHTML('afterbegin', `
-        <main>
-            <h1>Welcome to Daniel Godin Website<h1>
-            <p>More To Come Soon.  Check Back Often!</p>
-        </main>
-    `)
+    const pathname: string = window.location.pathname; // Finding pathname to sort which UI page function to trigger.
+    if (pathname == '/index.html' || pathname == '/' || pathname.length === 0) { buildIndexPageUI(); };
 }
 
 function buildFooterUI() {
