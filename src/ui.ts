@@ -56,12 +56,13 @@ function buildNavUI() {
 }
 
 function buildMainUI() {
+    const mainContentContainer = document.getElementById('mainContentContainer') as HTMLDivElement;
     const pathname: string = window.location.pathname; // Finding pathname to sort which UI page function to trigger.
-    if (pathname == '/index.html' || pathname == '/' || pathname.length === 0) { buildIndexPageUI(); };
-    if (pathname == '/now.html') { buildNowPageUI(); };
-    if (pathname == '/portfolio.html') { buildPortfolioPageUI(); };
-    if (pathname == '/blog.html') { buildBlogPageUI(); };
-    if (pathname == '/contact.html') { buildContactPageUI(); };
+    if (pathname == '/index.html' || pathname == '/' || pathname.length === 0) { buildIndexPageUI(mainContentContainer); };
+    if (pathname == '/now.html') { buildNowPageUI(mainContentContainer); };
+    if (pathname == '/portfolio.html') { buildPortfolioPageUI(mainContentContainer); };
+    if (pathname == '/blog.html') { buildBlogPageUI(mainContentContainer); };
+    if (pathname == '/contact.html') { buildContactPageUI(mainContentContainer); };
 }
 
 function buildFooterUI() {

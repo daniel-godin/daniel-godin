@@ -6,6 +6,11 @@
 
 // Functionality:
 
-export function buildContactPageUI() {
-    
+export function buildContactPageUI(mainContentContainer:HTMLDivElement) {
+    mainContentContainer.innerHTML = '';
+    mainContentContainer.insertAdjacentHTML('afterbegin', `
+        <main id=''>
+
+        </main>
+    `)
 }

@@ -6,8 +6,7 @@
 
 // Functionality:
 
-export function buildIndexPageUI() {
-    const mainContentContainer = document.getElementById('mainContentContainer') as HTMLDivElement;
+export function buildIndexPageUI(mainContentContainer: HTMLDivElement) {
     mainContentContainer.innerHTML = '';
     mainContentContainer.insertAdjacentHTML('afterbegin', `
         <main id='mainIndexPageContainer'>
